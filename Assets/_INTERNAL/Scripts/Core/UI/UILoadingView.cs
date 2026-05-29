@@ -1,4 +1,5 @@
 ﻿using Core.Base;
+using DG.Tweening;
 using R3;
 using UnityEngine;
 using UnityEngine.UI;
@@ -10,6 +11,7 @@ namespace Core.UI
         private CompositeDisposable _disposables;
 
         [SerializeField] private Slider _progress;
+        [SerializeField] protected float _progressAnimDuration = 0.5f;
 
         public override void Initialize()
         {
@@ -34,7 +36,7 @@ namespace Core.UI
 
         private void UpdateProgress(float progress)
         {
-            _progress.value = progress;
+            _progress.DOValue(progress, _progressAnimDuration);
         }
     }
 }

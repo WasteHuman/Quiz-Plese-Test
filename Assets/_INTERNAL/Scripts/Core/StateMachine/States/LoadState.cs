@@ -32,7 +32,7 @@ namespace Core.StateMachine.States
 
             for (int i = 0; i < 5; i++)
             {
-                await UniTask.Delay(200, cancellationToken: ct);
+                await UniTask.Delay(TimeSpan.FromSeconds(1f), cancellationToken: ct);
 
                 _progressChanged.Value = (i + 1) / 5f;
             }
