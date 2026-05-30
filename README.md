@@ -11,7 +11,7 @@
 4. Нажать Play в Unity Editor
 
 ### Архитектура (кратко)
-Проект построен на основе State Machine с разделением игровых состояний (Splash → Load → Gameplay и т.д.).
+Проект построен на основе State Machine и MVVM с разделением игровых состояний (Splash → Load → Gameplay и т.д.).
 
 Каждое состояние реализует интерфейс IState и управляется через IStateController<GameState>.
 
